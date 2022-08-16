@@ -1,12 +1,13 @@
 module.exports = {
-    baseUrl: 'https://yandex.ru',
+    baseUrl: 'https://shri-homework.usr.yandex-academy.ru',
     gridUrl: 'http://localhost:4444/wd/hub',
 
     browsers: {
         chrome: {
             desiredCapabilities: {
                 browserName: 'chrome'
-            }
+            },
+            testsPerSession: 1,
         }
     },
     plugins: {
@@ -14,5 +15,10 @@ module.exports = {
             path: 'hermione-html-reporter',
         },
         'hermione-selenium-standalone-runner': true
-    }
+    },
+    sets: {
+        desktop: {
+            files: 'test/hermione/*.hermione.js',
+        },
+    },
 }
