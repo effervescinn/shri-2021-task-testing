@@ -8,6 +8,7 @@ module.exports = {
                 browserName: 'chrome'
             },
             testsPerSession: 1,
+            sessionsPerBrowser: 1,
         }
     },
     plugins: {
